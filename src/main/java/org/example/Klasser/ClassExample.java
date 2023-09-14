@@ -21,16 +21,14 @@ public class ClassExample {
 
         // 4
         Car car3 = new Car("Volvo", 1995);
-        String carInformation = car3.carInfo(); //since this method runs, it goes to the method in Car class
-        System.out.println(car3.model + car3.year + " This is carInfo method");
+        String carInfo = car3.carInfo(); //since this method runs, it goes to the method in Car class
+        System.out.println(carInfo);
 
 
         // 5- Skapa en metod i "Car" klassen som returnerar bilens ålder baserat på dess årsmodell.
         Car car4 = new Car("Skoda", 2004);
         int carAge = car4.carAge();
-        System.out.println("Your car is " + carAge + " years old ");
-
-
+        System.out.println(carAge);
 
 
 

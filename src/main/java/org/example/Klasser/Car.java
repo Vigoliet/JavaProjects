@@ -2,6 +2,10 @@ package org.example.Klasser;
 
 // 1- Skapa en klass "Car" med medlemsvariablerna "model" och "year".
 
+
+import java.time.Year;
+import java.util.Date;
+
 public class Car {
 
     String model;
@@ -17,12 +21,15 @@ public class Car {
     // 4- Skapa en metod i "Car" klasen som returnerar en sträng med bilens modell och årsmodell.
 
     public String carInfo(){
-        return (model + year);
+
+        //combines the int and string to a string
+        return year + " " + model;
 
     }
     // 5- Skapa en metod i "Car" klassen som returnerar bilens ålder baserat på dess årsmodell.
     public int carAge(){
-        return 2023 - year;
+
+        return Year.now().getValue() - year;
     }
 
 }
