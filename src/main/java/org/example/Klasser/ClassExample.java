@@ -1,5 +1,9 @@
 package org.example.Klasser;
 
+import java.util.ArrayList;
+import java.util.List;
+
+
 // 1- Skapa en klass "Car" med medlemsvariablerna "model" och "year".
 // 2- Skapa en instans av "Car" - klassen och tilldela värden till medlemsvariablerna.
 // 3- Lägg till en constructor i "Car" - klassen och använda den för att skapa en ny instans av "Car".
@@ -7,6 +11,10 @@ package org.example.Klasser;
 // 5- Skapa en metod i "Car" klassen som returnerar bilens ålder baserat på dess årsmodell.
 public class ClassExample {
     public static void main(String[] args) {
+
+        //list for all vehicles
+        List<Vehicle> myVehicles = new ArrayList<>();
+
 
 
         // 2- Skapa en instans av "Car" - klassen och tilldela värden till medlemsvariablerna.
@@ -30,7 +38,20 @@ public class ClassExample {
         int carAge = car4.carAge();
         System.out.println(carAge);
 
+        //
+        //car4.StartEngine();
 
+        Truck truck = new Truck();
+
+        // adds vehicle to the list
+        myVehicles.add(truck);
+        myVehicles.add(car3);
+        myVehicles.add(car4);
+
+        // runs StartEngine method for all vehicles in list
+        for (int i = 0; i < myVehicles.size(); i++) {
+            myVehicles.get(i).StartEngine();
+        }
 
     }
 }

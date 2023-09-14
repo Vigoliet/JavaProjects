@@ -6,7 +6,7 @@ package org.example.Klasser;
 import java.time.Year;
 import java.util.Date;
 
-public class Car {
+public class Car extends Vehicle{
 
     String model;
     int year;
@@ -32,4 +32,10 @@ public class Car {
         return Year.now().getValue() - year;
     }
 
+    // is specific for car objects
+    @Override
+    public void StartEngine() {
+
+        System.out.println("The car is starting");
+    }
 }
